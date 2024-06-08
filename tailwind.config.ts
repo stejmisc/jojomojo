@@ -1,3 +1,4 @@
+import {nextui} from '@nextui-org/theme';
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -13,6 +14,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        'snell': ['snell', 'sans-serif'],
+        'IBMPlex': ['IBMPlex', 'serif'],
+      },
+      alignSelf: {
+        'top': 'start',
+      }
     },
   },
   plugins: [],
