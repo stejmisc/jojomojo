@@ -39,7 +39,7 @@ const testimonials = [
     },
 ]
 
-const productTemplate = (testimonial) => {
+const productTemplate = (testimonial: any) => {
     return (
         <div className='h-[412px] flex flex-col justify-center items-center w-full bg-amber-200'>
             <div className='text-2xl font-semibold mb-8'>{`${testimonial.name}, ${testimonial.country}`}</div>

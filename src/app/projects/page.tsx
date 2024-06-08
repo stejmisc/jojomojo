@@ -9,12 +9,12 @@ export default function Projects() {
             <div className='flex flex-col w-56 justify-center items-center'>
                 <Image src="/project1.webp" width={150} height={150} className='rounded-full' alt="Project 1" />
                 <Link className="font-semibold text-xl underline text-center" href={'https://cultureqisse.substack.com/p/2024-wellbeing-journey-food-is-medicine'} target='_blank'>Indic researcher (Ancient Indian Knowledge Systems)</Link>
-                <div className="text-xl text-gray-600 text-center my-4">As a Indic researcher, I have been studying ancient Indian texts including Ayurveda, Yogic traditions, Cultural traditions around art.</div>
+                <div className="text-xl text-gray-600 text-center my-4">{`As a Indic researcher, I have been studying ancient Indian texts including Ayurveda, Yogic traditions, Cultural traditions around art.`}</div>
             </div>
             <div className='flex flex-col w-56 justify-center items-center'>
                 <Image src="/project2.webp" width={150} height={150} className='rounded-full' alt="Project 2" />
-                <Link className="font-semibold text-xl underline text-center" href={'https://www.unesco-ichcap.org/board.es?mid=a10501020000&bid=A112&act=view&list_no=14103&tag=&nPage=1'} target='_blank'>Chief Minister's Good Governance Associate (CMGGA), Haryana</Link>
-                <div className="text-xl text-gray-600 text-center my-4">As a CMGGA, I worked on 15+ large scale programs in Haryana's Sonipat district working closely with the district administration.</div>
+                <Link className="font-semibold text-xl underline text-center" href={'https://www.unesco-ichcap.org/board.es?mid=a10501020000&bid=A112&act=view&list_no=14103&tag=&nPage=1'} target='_blank'>{`Chief Minister's Good Governance Associate (CMGGA), Haryana`}</Link>
+                <div className="text-xl text-gray-600 text-center my-4">{`As a CMGGA, I worked on 15+ large scale programs in Haryana's Sonipat district working closely with the district administration.`}</div>
             </div>
             <div className='flex flex-col w-56 justify-center items-center'>
                 <Image src="/project3.webp" width={150} height={150} className='rounded-full' alt="Project 3" />

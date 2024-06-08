@@ -11,7 +11,7 @@ const images = [
     { url: '/carousel5.png', alt: 'Carousel 5' },
 ];
 
-const itemTemplate = (item) => {
+const itemTemplate = (item: any) => {
     return <div className={'h-[600px] w-[600px] p-4 m-4'} style={{ position: "relative" }}>
         <Image
             src={item.url}
@@ -22,7 +22,7 @@ const itemTemplate = (item) => {
     </div>
 }
 
-const thumbnailTemplate = (item) => {
+const thumbnailTemplate = (item: any) => {
     return <div className={'h-24 w-24'} style={{ position: "relative" }}>
         <Image
             src={item.url}
