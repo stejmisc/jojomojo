@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Navbar() {
     return (
         <nav className="p-4">
-            <ul className="flex justify-between">
+            <ul className="flex justify-between text-[1vw] space-x-4">
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/my-story">My Story</Link></li>
                 <li><Link href="/projects">Projects</Link></li>

@@ -7,7 +7,10 @@ export default function ResearchAndWritings() {
         <div className="text-xl text-gray-600 w-1/2 text-center">I write about Indian cultural heritage and knowledge across areas like food systems, crafts, textiles, and heritage practices. Some of the writings can be seen below</div>
         <div className='grid grid-cols-3 gap-24 mt-16 items-start'>
             <div className='flex flex-col w-56 justify-center items-center'>
-                <Image src="/rad1.webp" width={150} height={150} className='rounded-full' alt="rad 1" />
+                <div className='relative w-[150px] h-[150px]'>
+                    <Image src="/rad1.webp" layout='fill' objectFit='cover' className='rounded-full' alt="rad 1" />
+
+                </div>
                 <Link className="font-semibold text-xl underline text-center" href={'https://www.unesco-ichcap.org/board.es?mid=a10301000000&bid=A105&act=view&list_no=13606&tag=&nPage='} target='_blank'>Craft initiatives by the Government of India</Link>
                 <div className="text-xl text-gray-600 text-center my-4">The book contains ten good practices from five Asia-Pacific countries (Nepal, Vietnam, Uzbekistan, India, and Kyrgyzstan) selected through the 2022 international contest, Good Practices in Policies and Activities on Safeguarding and Promoting Traditional Crafts for Sustainable Development in Communities.</div>
             </div>

@@ -8,7 +8,7 @@ export default function Header() {
             <div className="h-48 border-2 border-black w-1/2 flex justify-center items-center space-x-2">
                 <Image src="/header.webp" width={150} height={150} alt="Header Image" />
                 <div className="flex-row">
-                    <div className="font-snell text-8xl text-orange-900">the phoolish girl</div>
+                    <div className="font-snell text-[5vw] text-orange-900">the phoolish girl</div>
                     <Navbar />
                 </div>
             </div>
