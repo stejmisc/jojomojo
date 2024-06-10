@@ -3,6 +3,7 @@
 import { Button } from 'primereact/button';
 import { Carousel } from 'primereact/carousel';
 import { Tag } from 'primereact/tag';
+
 const responsiveOptions = [
     {
         breakpoint: '1400px',
@@ -41,25 +42,26 @@ const testimonials = [
 
 const productTemplate = (testimonial: any) => {
     return (
-        <div className='h-[412px] flex flex-col justify-center items-center w-full bg-amber-200'>
-            <div className='text-2xl font-semibold mb-8'>{`${testimonial.name}, ${testimonial.country}`}</div>
-            <div className='italic font-serif font-IBMPlex w-[512px] text-3xl'>{testimonial.description}</div>
+        <div className='h-auto flex flex-col justify-center items-center w-full bg-amber-200 p-4 md:p-8'>
+            <div className='text-lg md:text-2xl font-semibold mb-4 md:mb-8 text-center'>{`${testimonial.name}, ${testimonial.country}`}</div>
+            <div className='italic font-serif w-full md:w-[512px] text-base md:text-2xl text-center'>{testimonial.description}</div>
         </div>
     );
 };
 
 export default function Testimonials() {
-    return (<div className="h-[512px] w-full flex justify-center items-center">
-        <Carousel
-            value={testimonials}
-            numVisible={1}
-            numScroll={1}
-            responsiveOptions={responsiveOptions}
-            itemTemplate={productTemplate}
-            style={{ width: '100%' }}
-            showIndicators
-            showNavigators
-        />
-    </div>
+    return (
+        <div className="h-auto w-full flex justify-center items-center py-8">
+            <Carousel
+                value={testimonials}
+                numVisible={1}
+                numScroll={1}
+                responsiveOptions={responsiveOptions}
+                itemTemplate={productTemplate}
+                style={{ width: '100%' }}
+                showIndicators
+                showNavigators
+            />
+        </div>
     )
 }

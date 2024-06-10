@@ -2,16 +2,16 @@ import Image from 'next/image';
 
 export default function Body() {
     return (
-        <div className="h-[512px] w-full flex justify-between">
-            <div className="w-2/3" style={{ position: "relative" }}>
+        <div className="h-[512px] w-full flex flex-col md:flex-row justify-between">
+            <div className="w-full md:w-2/3 h-64 md:h-full relative">
                 <Image
                     src="/home.webp"
                     layout='fill'
                     objectFit='cover'
                     alt="Home Image" />
             </div>
-            <div className="flex justify-between items-center w-1/3 bg-amber-200">
-                <span className="p-24">
+            <div className="flex justify-center items-center w-full md:w-1/3 bg-amber-200 p-6 md:p-8 lg:p-12">
+                <span className="text-center md:text-left">
                     <strong>Namaste</strong>! Welcome to my page :)
                     <br />
                     <br />

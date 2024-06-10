@@ -1,48 +1,86 @@
 "use client"
 
-import { Galleria } from 'primereact/galleria';
 import Image from 'next/image';
+import { SetStateAction, useEffect, useState } from 'react';
 
 const images = [
-    { url: '/carousel1.jpg', alt: 'Carousel 1' },
-    { url: '/carousel2.jpeg', alt: 'Carousel 2' },
-    { url: '/carousel3.jpeg', alt: 'Carousel 3' },
-    { url: '/carousel4.jpeg', alt: 'Carousel 4' },
-    { url: '/carousel5.png', alt: 'Carousel 5' },
+    '/carousel1.jpg',
+    '/carousel2.jpeg',
+    '/carousel3.jpeg',
+    '/carousel4.jpeg',
+    '/carousel5.png',
 ];
 
-const itemTemplate = (item: any) => {
-    return <div className={'h-[600px] w-[600px] p-4 m-4'} style={{ position: "relative" }}>
-        <Image
-            src={item.url}
-            layout='fill'
-            objectFit='cover'
-            alt={item.alt}
-        />
-    </div>
+// Shuffle the array
+function shuffleArray(array: Array<string>): Array<string> {
+    const shuffled = array.slice();
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
 }
 
-const thumbnailTemplate = (item: any) => {
-    return <div className={'h-24 w-24'} style={{ position: "relative" }}>
-        <Image
-            src={item.url}
-            layout='fill'
-            objectFit='cover'
-            alt={item.alt}
-        />
-    </div>
-}
+export default function Collage() {
+    const [shuffledImages, setShuffledImages] = useState<Array<string>>([]);
 
-export default function ImageGallery() {
+    useEffect(() => {
+        setShuffledImages(shuffleArray(images));
+    }, []);
+
     return (
-        <div className=" flex justify-center items-center text-4xl p-16">
-            <Galleria
-                value={images}
-                numVisible={5}
-                style={{ maxWidth: '640px' }}
-                item={itemTemplate}
-                thumbnail={thumbnailTemplate}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-4 p-2 gap-2">
+            <div className='grid grid-rows-2 gap-2'>
+                <div className="relative w-full h-48 col-span-1">
+                    <Image
+                        src={shuffledImages[0]}
+                        alt={`Gallery Image ${shuffledImages[0]}`}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-lg"
+                    />
+                </div>
+                <div className="relative w-full h-48 col-span-1">
+                    <Image
+                        src={shuffledImages[1]}
+                        alt={`Gallery Image ${shuffledImages[1]}`}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-lg"
+                    />
+                </div>
+            </div>
+
+            <div className="relative w-full h-48 md:h-96 col-span-2">
+                <Image
+                    src={shuffledImages[2]}
+                    alt={`Gallery Image ${shuffledImages[2]}`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                />
+            </div>
+            <div className='grid grid-rows-2 gap-2'>
+                <div className="relative w-full h-48 col-span-1">
+                    <Image
+                        src={shuffledImages[3]}
+                        alt={`Gallery Image ${shuffledImages[3]}`}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-lg"
+                    />
+                </div>
+                <div className="relative w-full h-48 col-span-1">
+                    <Image
+                        src={shuffledImages[4]}
+                        alt={`Gallery Image ${shuffledImages[4]}`}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-lg"
+                    />
+                </div>
+            </div>
+
         </div>
-    )
+    );
 }
