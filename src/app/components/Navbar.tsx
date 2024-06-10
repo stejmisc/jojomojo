@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <nav className="p-4">
-            <ul className="flex justify-between italic text-[1vw] space-x-4">
+        <nav>
+            <ul className="flex justify-between italic text-[1vw] space-x-8">
                 <li><Link href="/">home</Link></li>
                 <li><Link href="/my-story">my story</Link></li>
                 <li><Link href="/projects">projects</Link></li>

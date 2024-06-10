@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@mui/material';
-import BookIcon from '@mui/icons-material/Book';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export default function Socials() {
     return (
         <div className="w-full flex flex-col justify-center items-center mb-10">
-            <Image src="/header.webp" width={150} height={150} alt="Header Image" />
+            <Image src="/header.webp" width={100} height={100} alt="Header Image" />
             <div className='py-4 flex flex-wrap justify-center space-x-4 md:space-x-12'>
                 <Link href="https://www.linkedin.com/in/jyotiishuklaa/" target='_blank'>
                     <Image
@@ -36,11 +36,11 @@ export default function Socials() {
                     />
                 </Link>
             </div>
-            <Link className='italic font-IBMPlex text-xl md:text-2xl pb-2 text-center' href="mailto:thephoolishgirl@gmail.com" target='_blank'>
+            <Link className='italic font-serif text-xl md:text-2xl pb-2 font-thin text-center text-black' href="mailto:thephoolishgirl@gmail.com" target='_blank'>
                 thephoolishgirl@gmail.com
             </Link>
-            <Link className='italic font-IBMPlex text-xl md:text-2xl p-2' href="https://cultureqisse.substack.com/" target='_blank'>
-                <Button variant="outlined" endIcon={<BookIcon />}>
+            <Link className='text-xl md:text-2xl p-2' href="https://cultureqisse.substack.com/" target='_blank'>
+                <Button className={'font-bold'} variant="contained" color='error' endIcon={<ArrowForwardIosIcon />}>
                     Blog
                 </Button>
             </Link>

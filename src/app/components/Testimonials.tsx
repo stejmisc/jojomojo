@@ -42,23 +42,23 @@ const testimonials = [
 
 const productTemplate = (testimonial: any) => {
     return (
-        <div className='h-auto flex flex-col justify-center items-center w-full bg-amber-200 p-4 md:p-8'>
-            <div className='text-lg md:text-2xl font-semibold mb-4 md:mb-8 text-center'>{`${testimonial.name}, ${testimonial.country}`}</div>
-            <div className='italic font-serif w-full md:w-[512px] text-base md:text-2xl text-center'>{testimonial.description}</div>
+        <div className='h-[512px] w-full flex flex-col justify-center items-center p-4 md:p-8'>
+            <div className='text-lg md:text-2xl font-semibold mb-16 text-center'>{`${testimonial.name}, ${testimonial.country}`}</div>
+            <div className='italic font-serif w-full md:w-[768px] text-base md:text-3xl text-center'>{testimonial.description}</div>
         </div>
     );
 };
 
 export default function Testimonials() {
     return (
-        <div className="h-auto w-full flex justify-center items-center py-8">
+        <div className="flex justify-center items-center py-8 bg-amber-200 m-4">
             <Carousel
                 value={testimonials}
                 numVisible={1}
                 numScroll={1}
                 responsiveOptions={responsiveOptions}
                 itemTemplate={productTemplate}
-                style={{ width: '100%' }}
+                style={{ width: '60%' }}
                 showIndicators
                 showNavigators
             />

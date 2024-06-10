@@ -16,6 +16,7 @@ const config: Config = {
       fontFamily: {
         'snell': ['snell', 'sans-serif'],
         'IBMPlex': ['IBMPlex', 'serif'],
+        'EBGaramond': ['EBGaramond', 'serif']
       },
       alignSelf: {
         'top': 'start',

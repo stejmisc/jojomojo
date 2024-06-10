@@ -1,11 +1,10 @@
 import Body from "./components/Body";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ImageGallery from "./components/ImageGallery";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import Testimonials from "./components/Testimonials";
-import Socials from "./components/Socials";
+import ProjectsPreview from "./components/ProjectsPreview";
 
 export default function Home() {
   return (
@@ -14,6 +13,7 @@ export default function Home() {
       <Footer />
       <ImageGallery />
       <Testimonials />
+      {/* <ProjectsPreview /> */}
     </main>
   );
 }

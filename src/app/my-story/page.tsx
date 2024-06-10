@@ -2,9 +2,9 @@ import Glimpse from "../components/Glimpse";
 
 export default function MyStory() {
     return (
-        <div className="m-2 flex font-serif flex-col w-full justify-center items-center">
-            <div className="text-3xl md:text-4xl text-center">About the creator</div>
-            <div className="w-full md:w-3/4 lg:w-1/2 text-lg md:text-xl leading-8 m-4 md:m-8 mb-8">
+        <div className="m-2 flex flex-col  justify-center items-center">
+            <div className="text-3xl md:text-4xl text-center mt-4">About the creator</div>
+            <div className="font-EBGaramond md:w-3/5 text-justify font-thin text-lg md:text-xl leading-8 m-4 md:m-8 mb-8">
                 Namaste,
                 <br /><br />
                 {`My name is Jyoti. My family roots are in Daltonganj, Jharkhand. However, I have lived in different states across India due to my father's defense background (Indian Army) and my diverse professional experiences, including Delhi (Delhi Cantonment, South Delhi), Uttar Pradesh (Mathura, Faizabad), Jammu & Kashmir (Uri), Gujarat (Ahmedabad & Kutch), Kerala (Kottayam & Trivandrum), Haryana (Sonipat  & Gurugram), Bihar (Gaya), Tamil Nadu (Auroville & Pondicherry). I have enjoyed learning about different Indian cultures & people from a young age. I was inclined to know more about Indian history, and its rich heritage from the beginning.`}
