@@ -35,7 +35,7 @@ export default function Collage() {
                 </div>
             </div>
 
-            <div className="relative w-full h-[768px] col-span-2">
+            <div className="relative w-full h-96 md:h-[768px] col-span-2">
                 <Image
                     src={images[2]}
                     alt={`Gallery Image ${images[2]}`}
