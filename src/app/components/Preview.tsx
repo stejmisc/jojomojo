@@ -31,7 +31,7 @@ const Preview: React.FC<Props> = ({ infoArray, title }) => (
                     <Carousel slidesToShow={3} arrows infinite autoplay autoplaySpeed={2000} >
                         {infoArray.map((info, index) => {
                             return (
-                                <div className="flex w-full h-full justify-center items-center p-16">
+                                <div key={info?.imageSrc} className="flex w-full h-full justify-center items-center p-16">
                                     <div className="flex flex-col  justify-center items-center">
                                         <div className="relative w-36 h-36">
                                         <Image src={info?.imageSrc} layout="fill" objectFit="cover" className='rounded-full' alt="Project 1" />
