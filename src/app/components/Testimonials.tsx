@@ -1,31 +1,4 @@
-"use client"
-
-import { Button } from 'primereact/button';
-import { Carousel } from 'primereact/carousel';
-import { Tag } from 'primereact/tag';
-
-const responsiveOptions = [
-    {
-        breakpoint: '1400px',
-        numVisible: 1,
-        numScroll: 1
-    },
-    {
-        breakpoint: '1199px',
-        numVisible: 1,
-        numScroll: 1
-    },
-    {
-        breakpoint: '767px',
-        numVisible: 1,
-        numScroll: 1
-    },
-    {
-        breakpoint: '575px',
-        numVisible: 1,
-        numScroll: 1
-    }
-];
+import { Carousel, Row, Col, ConfigProvider } from "antd";
 
 const testimonials = [
     {
@@ -40,28 +13,35 @@ const testimonials = [
     },
 ]
 
-const productTemplate = (testimonial: any) => {
-    return (
-        <div className='h-[512px] w-full flex flex-col justify-center items-center p-4 md:p-8'>
-            <div className='text-lg md:text-2xl font-semibold mb-16 text-center'>{`${testimonial.name}, ${testimonial.country}`}</div>
-            <div className='italic font-serif w-full md:w-[768px] text-base md:text-3xl text-center'>{testimonial.description}</div>
-        </div>
-    );
-};
 
-export default function Testimonials() {
-    return (
-        <div className="flex justify-center items-center py-8 bg-amber-200 m-4">
-            <Carousel
-                value={testimonials}
-                numVisible={1}
-                numScroll={1}
-                responsiveOptions={responsiveOptions}
-                itemTemplate={productTemplate}
-                style={{ width: '60%' }}
-                showIndicators
-                showNavigators
-            />
-        </div>
-    )
-}
+const Testimonials: React.FC = () => (
+    <div className="w-full h-[600px] bg-amber-200 relative mb-8">
+        <Row align="middle" justify="center" style={{ height: '100%' }}>
+            <Col className="m-8 w-3/5">
+                <ConfigProvider
+                    theme={{
+                        components: {
+                            Carousel: {
+                                arrowSize: 48,
+                            }
+                        },
+                    }}
+                >
+                    <Carousel arrows infinite >
+                        {testimonials.map((testimonial, index) => {
+                            return (
+                                <div className='text-center flex flex-col justify-center items-center p-16'>
+                                    <div className='text-lg md:text-2xl font-semibold mb-16'>{`${testimonial.name}, ${testimonial.country}`}</div>
+                                    <div className='italic font-serif w-full text-base md:text-3xl p-8'>{testimonial.description}</div>
+                                </div>
+                            )
+                        })}
+                    </Carousel>
+                </ConfigProvider>
+            </Col>
+        </Row>
+    </div>
+);
+
+export default Testimonials;
+

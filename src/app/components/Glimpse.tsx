@@ -1,6 +1,5 @@
-"use client";
-
-import { Galleria } from 'primereact/galleria';
+import React from 'react';
+import { Carousel } from 'antd';
 import Image from 'next/image';
 
 const images = [
@@ -12,56 +11,25 @@ const images = [
     { url: '/glimpse6.png', alt: 'Glimpse 6' },
 ];
 
-const itemTemplate = (item: any) => {
-    return (
-        <div className="h-[300px] md:h-[400px] lg:h-[600px] w-full md:w-[400px] lg:w-[600px] p-4 m-2 md:m-4" style={{ position: 'relative' }}>
-            <Image
-                src={item.url}
-                layout="fill"
-                objectFit="cover"
-                alt={item.alt}
-            />
-        </div>
-    );
-};
+const Glimpse: React.FC = () => (
+    <div className='w-full lg:w-3/5 bg-amber-200'>
+        <Carousel arrows>
+            {images.map((image, index) => {
+                return (
+                    <div key={index} className='relative h-96 md:h-[512px] w-96 lg:w-screen lg:h-screen'>
+                        <Image
+                            src={image.url}
+                            alt={image.alt}
+                            objectFit='cover'
+                            layout='fill'
+                            className='p-8'
+                        />
+                    </div>
+                );
+            })
+            }
+        </Carousel>
+    </div>
+);
 
-const thumbnailTemplate = (item: any) => {
-    return (
-        <div className="h-16 w-16 md:h-24 md:w-24" style={{ position: 'relative' }}>
-            <Image
-                src={item.url}
-                layout="fill"
-                objectFit="cover"
-                alt={item.alt}
-            />
-        </div>
-    );
-};
-
-export default function Glimpse() {
-    return (
-        <div className="flex justify-center items-center text-2xl md:text-4xl">
-            <Galleria
-                value={images}
-                numVisible={3}
-                responsiveOptions={[
-                    {
-                        breakpoint: '1024px',
-                        numVisible: 3
-                    },
-                    {
-                        breakpoint: '768px',
-                        numVisible: 2
-                    },
-                    {
-                        breakpoint: '560px',
-                        numVisible: 1
-                    }
-                ]}
-                style={{ maxWidth: '100%' }}
-                item={itemTemplate}
-                thumbnail={thumbnailTemplate}
-            />
-        </div>
-    );
-}
+export default Glimpse;
