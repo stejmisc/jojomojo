@@ -39,8 +39,8 @@ export default function Socials() {
             <Link className='italic font-serif pb-2 font-thin text-center text-black' href="mailto:thephoolishgirl@gmail.com" target='_blank'>
                 thephoolishgirl@gmail.com
             </Link>
-            <Link className='text-xl md:text-2xl p-2' href="https://cultureqisse.substack.com/" target='_blank'>
-                <Button className={'font-bold'} danger type="primary" icon={<RightOutlined />} iconPosition='end'>
+            <Link className='text-lg md:text-xl lg:text-2xl p-2' href="https://cultureqisse.substack.com/" target='_blank'>
+                <Button className='font-bold' danger type="primary" icon={<RightOutlined />}>
                     Blog
                 </Button>
             </Link>

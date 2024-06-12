@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <nav>
-            <ul className="flex justify-between italic text-[2vw] space-x-2 md:text-[1vw] md:space-x-8">
+        <nav className="flex justify-between items-center">
+            <ul className={`md:flex ${isOpen ? "block" : "hidden"} mt-4 md:mt-0 space-y-2 md:space-y-0 md:space-x-8`}>
                 <li><Link href="/">home</Link></li>
                 <li><Link href="/my-story">my story</Link></li>
                 <li><Link href="/projects">projects</Link></li>
@@ -11,5 +11,5 @@ export default function Navbar() {
                 <li><Link href="/offerings">offerings</Link></li>
             </ul>
         </nav>
-    )
+    );
 }

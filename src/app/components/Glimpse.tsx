@@ -14,20 +14,16 @@ const images = [
 const Glimpse: React.FC = () => (
     <div className='w-full lg:w-3/5 bg-amber-200'>
         <Carousel arrows infinite autoplay autoplaySpeed={2000}>
-            {images.map((image, index) => {
-                return (
-                    <div key={index} className='relative h-96 md:h-[512px] w-96 lg:w-screen lg:h-screen'>
-                        <Image
-                            src={image.url}
-                            alt={image.alt}
-                            objectFit='cover'
-                            layout='fill'
-                            className='p-8'
-                        />
-                    </div>
-                );
-            })
-            }
+            {images.map((image, index) => (
+                <div key={index} className='relative h-64 md:h-96 lg:h-[512px] w-full'>
+                    <Image
+                        src={image.url}
+                        alt={image.alt}
+                        layout='fill'
+                        objectFit='cover'
+                    />
+                </div>
+            ))}
         </Carousel>
     </div>
 );

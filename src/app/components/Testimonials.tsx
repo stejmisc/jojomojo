@@ -13,11 +13,10 @@ const testimonials = [
     },
 ]
 
-
 const Testimonials: React.FC = () => (
     <div className="w-full bg-amber-200 relative mb-8">
         <Row align="middle" justify="center" style={{ height: '100%' }}>
-            <Col className="m-8 w-3/5">
+            <Col xs={24} md={20} lg={16} className="m-8">
                 <ConfigProvider
                     theme={{
                         components: {
@@ -27,15 +26,23 @@ const Testimonials: React.FC = () => (
                         },
                     }}
                 >
-                    <Carousel arrows infinite autoplay autoplaySpeed={2000} >
-                        {testimonials.map((testimonial, index) => {
-                            return (
-                                <div key={testimonial?.name} className='text-center flex flex-col justify-center items-center mt-8'>
-                                    <div className='text-lg md:text-2xl font-semibold mb-4'>{`${testimonial.name}, ${testimonial.country}`}</div>
-                                    <div className='italic font-serif w-full text-base md:text-3xl p-8'>{testimonial.description}</div>
-                                </div>
-                            )
-                        })}
+                    <Carousel
+                        slidesToShow={1}
+                        responsive={[
+                            { breakpoint: 768, settings: { slidesToShow: 1 } },
+                            { breakpoint: 1024, settings: { slidesToShow: 1 } },
+                        ]}
+                        arrows
+                        infinite
+                        autoplay
+                        autoplaySpeed={2000}
+                    >
+                        {testimonials.map((testimonial, index) => (
+                            <div key={index} className='text-center flex flex-col justify-center items-center mt-8'>
+                                <div className='text-lg md:text-2xl font-semibold mb-4'>{`${testimonial.name}, ${testimonial.country}`}</div>
+                                <div className='italic font-serif w-full text-base md:text-xl lg:text-2xl p-4 md:p-8'>{testimonial.description}</div>
+                            </div>
+                        ))}
                     </Carousel>
                 </ConfigProvider>
             </Col>
@@ -44,4 +51,3 @@ const Testimonials: React.FC = () => (
 );
 
 export default Testimonials;
-
