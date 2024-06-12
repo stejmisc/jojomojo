@@ -38,7 +38,7 @@ const researchAndWritings = [
 
 
 const ResearchAndWritingsPreview: React.FC = () => (
-    <div className="w-full h-[600px] bg-amber-200 relative mb-8">
+    <div className="w-full h-[400px] bg-amber-200 relative mb-8">
         <Row align="middle" justify="center" style={{ height: '100%' }}>
             <Col className="m-8 w-3/5">
                 <ConfigProvider
@@ -50,7 +50,7 @@ const ResearchAndWritingsPreview: React.FC = () => (
                         },
                     }}
                 >
-                    <Carousel arrows infinite >
+                    <Carousel arrows infinite autoplay autoplaySpeed={2000} >
                         {researchAndWritings.map((rar, index) => {
                             return (
                                 <div key={rar?.link} className='text-center flex flex-col justify-center items-center p-16'>

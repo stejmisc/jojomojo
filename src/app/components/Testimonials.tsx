@@ -15,7 +15,7 @@ const testimonials = [
 
 
 const Testimonials: React.FC = () => (
-    <div className="w-full h-[600px] bg-amber-200 relative mb-8">
+    <div className="w-full h-[400px] bg-amber-200 relative mb-8">
         <Row align="middle" justify="center" style={{ height: '100%' }}>
             <Col className="m-8 w-3/5">
                 <ConfigProvider
@@ -27,7 +27,7 @@ const Testimonials: React.FC = () => (
                         },
                     }}
                 >
-                    <Carousel arrows infinite >
+                    <Carousel arrows infinite autoplay autoplaySpeed={2000} >
                         {testimonials.map((testimonial, index) => {
                             return (
                                 <div key={testimonial?.name} className='text-center flex flex-col justify-center items-center p-16'>

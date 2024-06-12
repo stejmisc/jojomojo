@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Body() {
     return (
@@ -10,17 +11,17 @@ export default function Body() {
                     objectFit='cover'
                     alt="Home Image"
                     unoptimized
-                    />
+                />
             </div>
             <div className="flex justify-center items-center w-full md:w-1/3 bg-amber-200 p-6 md:p-8 lg:p-12">
-                <span className="text-center md:text-left">
+                <span className="md:text-left">
                     <strong>Namaste</strong>! Welcome to my page :)
                     <br />
                     <br />
-                    My name is <strong>Jyoti</strong>. I talk about Indian cultural heritage and sustainable systems, focusing on traditional food, local crafts, festivals, villages, and unique places in India.
+                    My name is <em>Jyoti</em>. I talk about Indian cultural heritage and sustainable systems, focusing on traditional food, local crafts, festivals, villages, and unique places in India.
                     <br />
                     <br />
-                    <strong>Join me</strong> in my explorations!
+                    <Link href="/my-story" ><strong >Join me</strong> in my explorations!</Link>
                 </span>
             </div>
         </div>

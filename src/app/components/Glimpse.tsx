@@ -13,7 +13,7 @@ const images = [
 
 const Glimpse: React.FC = () => (
     <div className='w-full lg:w-3/5 bg-amber-200'>
-        <Carousel arrows>
+        <Carousel arrows infinite autoplay autoplaySpeed={2000}>
             {images.map((image, index) => {
                 return (
                     <div key={index} className='relative h-96 md:h-[512px] w-96 lg:w-screen lg:h-screen'>

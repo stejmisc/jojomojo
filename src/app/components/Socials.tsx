@@ -5,7 +5,7 @@ import { RightOutlined } from '@ant-design/icons';
 
 export default function Socials() {
     return (
-        <div className="w-full flex flex-col justify-center items-center mb-10">
+        <div className="w-full flex flex-col justify-center items-center mb-10 mt-16">
             <Image src="/header.webp" width={70} height={70} alt="Header Image" />
             <div className='py-4 flex flex-wrap justify-center space-x-4 md:space-x-12'>
                 <Link href="https://www.linkedin.com/in/jyotiishuklaa/" target='_blank'>

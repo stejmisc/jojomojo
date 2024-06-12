@@ -11,9 +11,9 @@ export default function Home() {
       <Body />
       <Footer />
       <ImageGallery />
-      <Testimonials />
       <ProjectsPreview />
       <ResearchAndWritingsPreview />
+      <Testimonials />
     </main>
   );
 }
