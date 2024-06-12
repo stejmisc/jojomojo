@@ -30,7 +30,7 @@ const Testimonials: React.FC = () => (
                     <Carousel arrows infinite >
                         {testimonials.map((testimonial, index) => {
                             return (
-                                <div className='text-center flex flex-col justify-center items-center p-16'>
+                                <div key={testimonial?.name} className='text-center flex flex-col justify-center items-center p-16'>
                                     <div className='text-lg md:text-2xl font-semibold mb-16'>{`${testimonial.name}, ${testimonial.country}`}</div>
                                     <div className='italic font-serif w-full text-base md:text-3xl p-8'>{testimonial.description}</div>
                                 </div>

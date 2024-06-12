@@ -53,7 +53,7 @@ const ResearchAndWritingsPreview: React.FC = () => (
                     <Carousel arrows infinite >
                         {researchAndWritings.map((rar, index) => {
                             return (
-                                <div className='text-center flex flex-col justify-center items-center p-16'>
+                                <div key={rar?.link} className='text-center flex flex-col justify-center items-center p-16'>
                                     <Link className="font-semibold text-xl underline text-center" href={rar?.link} target='_blank'>{rar?.title}</Link>
                                     <div className="italic font-serif text-3xl text-gray-600 text-center my-4">{rar?.description}</div>
                                 </div>

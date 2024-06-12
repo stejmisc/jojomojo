@@ -52,7 +52,7 @@ const ProjectsPreview: React.FC = () => (
                     <Carousel arrows infinite >
                         {projects.map((project, index) => {
                             return (
-                                <div className='text-center flex flex-col justify-center items-center p-8'>
+                                <div key={project?.link} className='text-center flex flex-col justify-center items-center p-8'>
                                     <Link className="font-semibold text-xl underline text-center" href={project?.link} target='_blank'>{project?.title}</Link>
                                     <div className="italic font-serif text-3xl text-gray-600 text-center my-4">{project?.description}</div>
                                 </div>
