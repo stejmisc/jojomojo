@@ -21,6 +21,7 @@ const Glimpse: React.FC = () => (
                         alt={image.alt}
                         layout='fill'
                         objectFit='cover'
+                        unoptimized
                     />
                 </div>
             ))}

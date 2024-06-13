@@ -50,6 +50,7 @@ const Preview: React.FC<Props> = ({ infoArray, title }) => (
                                             objectFit="cover"
                                             className="rounded-full"
                                             alt={info.title}
+                                            unoptimized
                                         />
                                     </div>
                                     <Link className="font-semibold text-lg md:text-xl underline text-center mt-8" style={{ textDecoration: 'none' }} href={info.link} target='_blank'>

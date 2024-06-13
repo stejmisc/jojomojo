@@ -26,9 +26,10 @@ export default function MyStory() {
                 <p>
                     {`I worked with an early-stage start-up focusing on building and improving the quality of life by focusing on well-being based on ancient knowledge systems of India. I had the rare opportunity to meet, interact, and learn about the oldest systems written about well-being and understand the interconnections & relevance in the modern world. This was a life-changing experience and all the learning has helped me so much to improve my health and look at wellbeing from a completely different lens. I wish to document all my learnings from such diverse and rich experiences here and hope to grow as an individual by connecting with the right people, community & space for such knowledge.`}
                 </p>
+                <br />
+                <br />
+                <p>Presenting glimpses of the last decade and some of the richest learning experiences</p>
             </div>
-            <div className="text-3xl md:text-4xl mt-10 text-center">Life Journey</div>
-            <div className="mt-10 text-lg md:text-xl text-center">Presenting glimpses of the last decade and some of the richest learning experiences</div>
             <Glimpse />
         </div>
     );

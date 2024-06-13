@@ -21,7 +21,7 @@ export default function Body() {
                     My name is <em>Jyoti</em>. I talk about Indian cultural heritage and sustainable systems, focusing on traditional food, local crafts, festivals, villages, and unique places in India.
                     <br />
                     <br />
-                    <Link className="text-blue-500 hover:underline" href="/my-story"><strong>Join me</strong> in my explorations!
+                    <Link href="/my-story"><strong>Join me</strong> in my explorations!
                     </Link>
                 </div>
             </div>

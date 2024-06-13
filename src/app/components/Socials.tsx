@@ -6,7 +6,7 @@ import { RightOutlined } from '@ant-design/icons';
 export default function Socials() {
     return (
         <div className="w-full flex flex-col justify-center items-center mb-10 mt-16">
-            <Image src="/header.webp" width={70} height={70} alt="Header Image" />
+            <Image src="/header.webp" width={70} height={70} alt="Header Image" unoptimized/>
             <div className='py-4 flex flex-wrap justify-center space-x-4 md:space-x-12'>
                 <Link href="https://www.linkedin.com/in/jyotiishuklaa/" target='_blank'>
                     <Image
@@ -15,6 +15,7 @@ export default function Socials() {
                         width={22}
                         height={22}
                         priority
+                        unoptimized
                     />
                 </Link>
                 <Link href="https://www.youtube.com/@thephoolishgirl" target='_blank'>
@@ -24,6 +25,7 @@ export default function Socials() {
                         width={22}
                         height={22}
                         priority
+                        unoptimized
                     />
                 </Link>
                 <Link href="https://www.instagram.com/thephoolishgirl/" target='_blank'>
@@ -33,6 +35,7 @@ export default function Socials() {
                         width={22}
                         height={22}
                         priority
+                        unoptimized
                     />
                 </Link>
             </div>
